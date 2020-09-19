@@ -1,0 +1,14 @@
+{
+  "name": "corejax",
+  "version": "1.0.0",
+  "description": "A dynamic ajax library for supporting dynamic html within dotnet razor pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "corejax"
+  ],
+  "author": "Tyler Ellis",
+  "license": "ISC"
+}
