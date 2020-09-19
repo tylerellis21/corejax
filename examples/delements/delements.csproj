@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../../netcorejax/netcorejax.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <CorejaxTypeScript Include="..\..\corejax\build\**\*.*"/>
+    </ItemGroup>
+
+      <Target Name="CopyFiles" AfterTargets="AfterBuild">
+        <Copy
+            SourceFiles="@(CorejaxTypeScript)"
+            DestinationFiles="./wwwroot/lib/corejax/%(RecursiveDir)%(Filename)%(Extension)"
+        />
+    </Target>
+
+</Project>
